@@ -1,0 +1,680 @@
+@import "vars.sass"
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	::after
+		content: " "
+		display: block
+		width: 100%
+		height: 0
+		clear: both
+body
+	width: 100%
+	background-color: #111
+	color: #fff
+	overflow: hidden
+	// position: relative
+.loader_wrapper
+	background: darkslategray
+	width: 100%
+	height: 100%
+	z-index: 50
+	position: absolute
+	#preloader_1
+		top: 0%
+		bottom: 0%
+		right: 0%
+		margin: auto
+		position: relative
+		margin-left: 50%
+		margin-top: 25%
+		span
+			display: block
+			bottom: 0px
+			width: 9px
+			height: 5px
+			position: absolute
+			-webkit-animation: preloader_1 1.5s  infinite ease-in-out
+			-moz-animation: preloader_1 1.5s  infinite ease-in-out
+			animation: preloader_1 1.5s  infinite ease-in-out
+		span:nth-child(2)
+			left: 16px
+			-webkit-animation-delay: .2s
+			-moz-animation-delay: .2s
+			animation-delay: .2s
+			background-color: white
+		span:nth-child(3)
+			left: 32px
+			-webkit-animation-delay: .4s
+			-moz-animation-delay: .4s
+			animation-delay: .4s
+		span:nth-child(4)
+			left: 33px
+			-webkit-animation-delay: .6s
+			-moz-animation-delay: .6s
+			animation-delay: .6s
+		span:nth-child(5)
+			left: 44px
+			-webkit-animation-delay: .8s
+			-moz-animation-delay: .8s
+			animation-delay: .8s
+header
+	width: 100%	
+	height: 55px
+	line-height: 55px
+	background-color: rgba(10, 30, 30, 0.95)
+	// background-color: rgba(255, 255, 255, 0.09)
+	.elem_logo
+		cursor: pointer
+		width: 40px
+		height: 40px
+		vertical-align: middle
+		display: inline-block
+		margin-left: 15.8%
+		img
+			width: 100%
+			height: 100%
+	.menu_wrapper
+		float: right
+		width: 40%	
+		height: 100%
+		// background-color: red
+		.menu_link
+			text-decoration: none
+			outline: none
+			color: #fff
+			float: left
+			margin-right: 8%
+			.menu_item
+				letter-spacing: 2px
+				font-family: 'Semibold'
+				float: left
+				font-size: 12px
+				list-style-type: none
+				transition: 0.5s
+				text-transform: uppercase
+				&:hover
+					color: $main_color
+					transition: 0.5s
+
+#elem1
+	opacity: 0.80
+#elem2
+	opacity: 0.60
+#elem3
+	opacity: 0.40
+#elem4
+	opacity: 0.20
+#elem5
+	opacity: 0.10
+
+.message_wrapper
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.95) 
+	z-index: 15
+	position: absolute
+	display: none 
+	.content
+		text-align: center
+		width: 500px
+		height: 350px
+		background-color: rgba(255, 255, 255, 0.10)
+		position: absolute
+		top: 0%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		margin: auto
+		border-radius: 5px
+		h2
+			margin-top: 15px
+			font-family: 'Regular'
+			font-size: 20px
+			letter-spacing: 3.5px
+		.msg_field
+			display: block
+			margin: 15px auto
+			border-radius: 5px
+			border: 1px solid grey
+			outline: none
+		input
+			height: 35px
+			width: 250px
+			padding-left: 10px
+			color: black
+		textarea
+			color: black
+			height: 120px
+			width: 250px
+			padding: 10px 10px
+		.submitInp
+			width: 150px
+			height: 40px
+			border: none
+			border-radius: 4px
+			background-color: $main_color2
+			font-family: 'Regular'
+			font-size: 20px
+			display: block
+			color: lightgrey
+			margin: 15px auto
+			cursor: pointer
+			text-transform: uppercase
+			transition: 0.5s
+			text-align: center
+			padding-left: 0px 
+			&:hover
+				color: white
+				background-color: dimgrey
+		.closeBtn
+			margin-right: -60px
+			float: right
+			display: block
+			width: 40px
+			height: 40px
+			img
+				width: 100%
+				height: 100%
+	.msgSuccess
+		width: 350px
+		height: 100px
+		line-height: 100px
+		// background-color: red
+		position: absolute
+		top: 0%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		margin: auto
+		display: none
+		p
+			display: inline-block
+			vertical-align: middle
+			line-height: 25px
+			font-family: 'Regular'
+			font-size: 25px
+
+.reg_wrapper
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.95) 
+	z-index: 15
+	position: absolute
+	display: none
+	#checkYourInfo
+		display: none
+		background-color: rgba(0, 0, 0, 0.95)
+		width: 50%
+		height: 90%
+		position: absolute
+		margin: auto
+		top: 0%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		border-radius: 5px
+		z-index: 20
+		.data_wrapper
+			width: 50%
+			height: 50%
+			// background-color: red
+			position: absolute
+			margin: auto
+			top: 0%
+			bottom: 0%
+			left: 0%
+			right: 0%
+			text-align: center
+			h2
+				margin-top: 15px
+				margin-bottom: 15px
+				text-align: center
+				display: block
+				letter-spacing: 1.5px
+				font-size: 20px
+				color: #fff
+				font-family: 'Regular'
+			.info
+				p
+					text-align: left
+					display: block
+					margin-top: 5px
+					margin-left: 110px
+					font-size: 16px
+					color: #fff
+					font-family: 'Regular'
+			.submitOk
+				outline: none
+				margin: 15% auto
+				width: 130px
+				height: 30px
+				color: #fff
+				cursor: pointer
+				border: 1px solid white
+				background-color: transparent 
+	.content
+		z-index: 15
+		background-color: rgba(255, 255, 255, 0.1)
+		width: 50%
+		height: 87%
+		position: absolute
+		margin: auto
+		top: -5%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		border-radius: 5px
+		.main_text
+			margin-top: 20px
+			text-align: center
+			font-family: 'Regular'
+			margin-bottom: 25px
+		.filed
+			margin-left: 15.8%
+			display: block
+			margin: 2% 20%
+			width: 300px
+			height: 40px
+			border-radius: 3px
+			border: none
+			font-family: 'Regular'
+		.field_input
+			padding-left: 15px
+			color: #000000
+		.select_field
+			width: 150px
+		.message
+			margin-left: 20%
+			width: 400px
+			height: 150px
+			outline: none
+			display: inline-block
+			padding: 2% 2%
+			line-height: 25px
+			font-family: 'Regular'
+			border-radius: 4px
+		.submit_btn
+			width: 200px
+			height: 40px
+			border: none
+			border-radius: 4px
+			background-color: $main_color2
+			font-family: 'Regular'
+			font-size: 16px
+			display: block
+			color: lightgrey
+			margin: 15px auto
+			cursor: pointer
+			text-transform: uppercase
+			transition: 0.5s
+			&:hover
+				color: white
+				background-color: dimgrey
+		.closeBtn
+			margin-right: -60px
+			float: right
+			display: block
+			width: 40px
+			height: 40px
+			img
+				width: 100%
+				height: 100%
+
+.content
+	width: 100%
+	height: 95%
+	// background-color: rgba(0, 0, 0, 0.5)
+	margin: auto
+	position: relative
+	background-color: #111
+	.wrapper
+		// text-align: center
+		// float: left
+		.port
+			float: right
+			width: 2px
+			height: 0px
+			background-color: grey
+			position: absolute
+			top: 35%
+			left: 14%
+		.h1_wrap
+			// float: left
+			display: inline-block
+			position: absolute
+			top: 35%
+			left: 15%
+			z-index: 1
+			// border-left: 2px grey solid
+			overflow: hidden
+			height: 100px
+			// background-color: red
+			width: 100%
+			h1
+				margin-left: -700px
+				color: #fff
+				font-family: 'Semibold'
+				letter-spacing: 5.0px
+				font-size: 70px
+				// display: none
+		.h2_wrap
+			// margin-top: -50px		
+			width: 100%
+			height: 0px
+			display: block
+			overflow: hidden
+			position: absolute
+			z-index: 1
+			top: 48%
+			left: 15.8%	
+			// background-color: green		
+			h2
+				color: #fff
+				font-family: 'Semibold'
+				letter-spacing: 5.0px
+				font-size: 40px
+				// top: 47%
+		.btn_wrapper
+			// background-color: red
+			width: 100%
+			height: 100px
+			position: absolute
+			top: 60%
+			z-index: 5
+			// display: block
+			// background-color: red
+			left: 15.8%
+			display: none
+			.reg_btn
+				float: left
+				margin-right: 4% 
+			.input_btn
+				height: 40px
+				width: 190px
+				letter-spacing: 1.5px
+				color: #fff
+				border: 0.5px solid #fff 
+				font-family: 'Semibold'
+				background-color: transparent
+				font-size: 14px
+				border-radius: 1%
+				transition: 0.5s
+				cursor: pointer 
+				// margin-right: 4%
+				transition: 0.5s 
+				outline: none
+				color: lightgrey
+				text-transform: uppercase
+				&:hover
+					background-color: $main_color2
+					color: white
+					transition: 0.5s 
+		.elem_wrapper
+			// background-color: rgba(0, 0, 0, 0.5)
+			background-color: red
+			display: block
+			width: 100%
+			height: 100% 
+			.elem_earth
+				z-index: 1
+				display: block
+				width: 250px
+				height: 250px
+				// background-color: black
+				position: absolute
+				display: none
+				bottom: 0
+				top: 0
+				margin: auto
+				right: 22%	
+				// right: 0
+			.elem_last
+				left: 760px
+				width: 255px
+				height: 260px
+				// display: none
+			.light
+				display: none
+				// opacity: 0.3	
+				// opacity: 0.5
+#speakers
+	// display: none
+	width: 100%
+	height: 100%
+	// position: absolute
+	z-index: 10
+	background-color: #111
+	position: relative
+	.wrapper
+		// background-color: green
+		width: 75%
+		height: 70%
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto
+		// text-align: center
+		.speaker_item
+			display: inline-block
+			width: 30%
+			margin: 0 auto
+			margin-left: 2.5%
+			float: left
+			height: 100%
+			background-color: rgba(178, 178, 178, 0.1)
+			position: relative
+			.image
+				display: block
+				border-radius: 100%
+				margin: -85px auto
+				width: 170px
+				height: 170px
+				img
+					width: 100%
+					height: 101%
+					margin-top: -1.5px
+			.text_wrapper
+				margin-top: 100px
+				line-height: 25px
+				.text_topic
+					width: 75%
+					height: 80px
+					line-height: 80px
+					margin: auto
+					margin-top: 3%
+					margin-bottom: 3%
+					text-align: center
+					.p_text
+						text-align: center
+						line-height: 25px
+						font-family: 'Regular'
+						display: inline-block
+						vertical-align: middle
+						font-size: 16px
+				.p_text
+					font-family: 'Regular'
+					display: block
+					color: #fff
+					position: relative
+					margin: 0% 5% 0% 5%
+					text-align: justify
+					font-size: 14px
+				.centering
+					text-align: center
+					font-family: 'Semibold'
+					font-size: 20px	
+				.margin
+					margin-bottom: 7%
+					
+#reg_form
+	width: 100%
+	height: 93%
+	background-color: #111
+	margin: auto
+	position: relative
+	#checkYourInfo
+		display: none
+		background-color: rgba(0, 0, 0, 0.95)
+		width: 50%
+		height: 90%
+		position: absolute
+		margin: auto
+		top: 0%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		border-radius: 5px
+		z-index: 20
+		.data_wrapper
+			width: 50%
+			height: 50%
+			// background-color: red
+			position: absolute
+			margin: auto
+			top: 0%
+			bottom: 0%
+			left: 0%
+			right: 0%
+			text-align: center
+			h2
+				margin-top: 15px
+				margin-bottom: 15px
+				text-align: center
+				display: block
+				letter-spacing: 1.5px
+				font-size: 20px
+				color: #fff
+				font-family: 'Regular'
+			.info
+				p
+					text-align: left
+					display: block
+					margin-top: 5px
+					margin-left: 110px
+					font-size: 16px
+					color: #fff
+					font-family: 'Regular'
+			.submitOk
+				outline: none
+				margin: 15% auto
+				width: 130px
+				height: 30px
+				color: #fff
+				cursor: pointer
+				border: 1px solid white
+				background-color: transparent
+
+	.form_wrapper
+		z-index: 15
+		background-color: rgba(255, 255, 255, 0.1)
+		width: 50%
+		height: 90%
+		position: absolute
+		margin: auto
+		top: 0%
+		bottom: 0%
+		left: 0%
+		right: 0%
+		border-radius: 5px
+		.main_text
+			margin-top: 20px
+			text-align: center
+			font-family: 'Regular'
+			margin-bottom: 25px
+		.filed
+			margin-left: 15.8%
+			display: block
+			margin: 2% 20%
+			width: 300px
+			height: 40px
+			border-radius: 3px
+			border: none
+			font-family: 'Regular'
+		.field_input
+			padding-left: 15px
+			color: #000000
+		.select_field
+			width: 150px
+		.message
+			margin-left: 20%
+			width: 400px
+			height: 150px
+			outline: none
+			display: inline-block
+			padding: 2% 2%
+			line-height: 25px
+			font-family: 'Regular'
+			border-radius: 4px
+		.submit_btn
+			width: 200px
+			height: 40px
+			border: none
+			border-radius: 4px
+			background-color: $main_color2
+			font-family: 'Regular'
+			font-size: 16px
+			display: block
+			color: lightgrey
+			margin: 15px auto
+			cursor: pointer
+			text-transform: uppercase
+			transition: 0.5s
+			&:hover
+				color: white
+				background-color: dimgrey
+#map
+	position: absolute
+	// top: 80px
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	display: block
+	.address_wrapper
+		background-color: rgba(0, 0, 0, 0.6)
+		width: 350px
+		height: 170px
+		position: absolute
+		z-index: 10
+		right: 20%
+		top: 15%
+		// bottom: 0%
+		// margin: auto
+		h2
+			margin: 20px 20px
+			font-family: 'Regular'
+			font-size: 22px
+		p
+			margin: 2px 20px
+			font-size: 14px
+			font-family: 'Regular'
+			display: block
+figure
+		position: relative
+		width: 100%
+		height: 100%
+		margin: 0
+object
+	position: relative
+	width: 100%
+	height: 100%
+
+
+
+
+.main_color
+	color: $main_color
+	display: inline-block
+	// background-color: grey
+	&:after
+		margin-top: -5px
+		border-bottom: 3px solid white
+
+
+.hidden
+	display: none

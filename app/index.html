@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QC MeetUp</title>
+	
+	<style>
+		@keyframes preloader_1 {
+			0% {height:5px;transform:translateY(0px);background:#fff;}
+			25% {height:5px;transform:translateY(0px);background:#58e5f9;}
+			50% {height:40px;transform:translateY(20px);background:#58e5f9;}
+			100% {height:5px;transform:translateY(0px);background:#58e5f9;}}
+	</style>
+
+<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+	<script>loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
+
+	<noscript>	
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
+
+</head>
+<body>
+	<div class="loader_wrapper">
+		<div id="preloader_1">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<header>
+		<a href="http://localhost:3000/" id="goToMain" class="elem_logo"><img src="img/elem_logo.svg" type="image/svg+xml"></a>
+		<div class="menu_wrapper">
+			<a class="menu_link" href="speakers.html"><li class="menu_item">speakers</li></a>
+			<a class="menu_link" id="goReg" href="reg.html"><li class="menu_item">registration</li></a>
+			<a class="menu_link" name="goMap" href="map.html"><li class="menu_item">map</li></a>
+		</div>
+	</header>
+
+	<div class="message_wrapper" id="msg_content">
+		<div class="content" >
+			<a id="closeBtnMsg" class="closeBtn" href="javascript:"><img src="../img/close.png"" alt=""></a>
+			<h2>What interests you?</h2>
+			<form id="formMsg">
+				<input type="text" class="msg_field" name="name" id="msgName" placeholder="Name" required>
+				<input type="text" class="msg_field" name="phone" id="msgPhone" name" placeholder="Phone" required>
+				<textarea name="message" class="msg_field" name" id="msg" placeholder="Message ..." required></textarea>
+				<input type="submit" class="submitInp" value="OK" id="msgSubmit">
+			</form>
+			<div class="msgSuccess">
+				<p>Thanks for you question. We contact with you soon!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="reg_wrapper" id="reg_content">
+		<div id="checkYourInfo">
+			<div class="data_wrapper">
+				<h2>you filled next info:</h2>
+				<div class="info">
+					<p class="checkInfo"></p>
+				</div>	
+				<input id="submitOk2" class="submitOk" type="button" value="OK">
+			</div>
+		</div>
+		<div class="content" >
+			<a id="closeBtnReg" class="closeBtn" href="javascript:"><img src="../img/close.png"" alt=""></a>
+			<h2 class="main_text">Please, fill out all need info for registration on QC Meetup</h2>
+			<form id="formReg">
+				<input name="first" id="first" class="getInfoReg filed field_input" type="text" placeholder="First Name *" required>
+				<input name="last" id="last" class="getInfoReg filed field_input" type="text" placeholder="Last Name *" required>
+				<input name="mail" id="mail" class="getInfoReg filed field_input" type="email" placeholder="E-mail *" required>
+				<select name="gender" id="gender" class="getInfoReg filed select_field field_input" id="">
+					<option>male</option>
+					<option>female</option>
+				</select>
+				<input name="address" id="address" type="text" class="getInfoReg filed field_input" placeholder="Home address">
+				<input name="phone" id="phone" type="text" class="getInfoReg filed field_input" placeholder="Phone *" required>
+				<textarea class="getInfoReg message" name="message" placeholder="Propose something ..." id="message"></textarea>
+				<input type="submit" id="reg_btn2" class="submit_btn" value="registration">
+			</form>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="wrapper">
+			<div class="port"></div>
+			<div class="h1_wrap">
+				<h1 class="titleConf">Winter QC Meetup</h1>
+			</div>
+			<div class="h2_wrap">
+				<h2 class="city">Ivano-Frankivsk, <span class="main_color">09 DEC</span> 2017</h2>
+			</div>
+
+			<div class="elem_wrapper">
+				<object class="elem_earth" id="elem1" data="img/elem5.svg" type="image/svg+xml"></object>
+				<object class="elem_earth" id="elem2" data="img/elem5.svg" type="image/svg+xml"></object>
+				<object class="elem_earth" id="elem3" data="img/elem5.svg" type="image/svg+xml"></object>
+				<object class="elem_earth" id="elem4" data="img/elem5.svg" type="image/svg+xml"></object>
+				<object class="elem_earth" id="elem5" data="img/elem5.svg" type="image/svg+xml"></object>
+			</div>
+			<div class="btn_wrapper">
+				<a class="reg_btn" id="registration_btn" href="javascript:"><input type="button" class="input_btn" value="registration"></a>
+				<input type="button" id="messageBtn" class="input_btn" value="message">
+			</div>
+		</div>
+	</div>
+
+	<script>var scr = {"scripts":[
+	{"src" : "js/libs.js", "async" : false},
+	{"src" : "js/main.js", "async" : false}
+	]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+
+</body>
+</html>

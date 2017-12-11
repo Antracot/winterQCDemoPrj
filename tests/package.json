@@ -1,0 +1,23 @@
+{
+	"name": "AutomationTestPage",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"preptor": "node_modules/.bin/webdriver-manager update",
+		"ptor": "node_modules/.bin/protractor protractor.conf.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"chance": "^1.0.11",
+		"jasmine-spec-reporter": "^4.2.1",
+		"protractor": "^5.1.2"
+	}
+}
