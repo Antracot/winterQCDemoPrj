@@ -3,7 +3,7 @@ demo project of web page and tests for Winter QC Meetup
 
 For correctly working you must run few simple commands.
 
-Open CMD and install modules inside winterQCDemoPrj folder - npm istall;
+Open CMD and install modules inside winterQCDemoPrj folder - npm install;
 Open sub folder tests and install modules too - npm install;
 
 For running web page from local web server run command - gulp;
